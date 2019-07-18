@@ -1,4 +1,10 @@
 from flask import Flask, render_template
+import os
+import psycopg2
+
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 
 app = Flask(__name__)
@@ -7,15 +13,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-#@app.route('/')
-#def index():
-#    return 'Hello world, my name is jasmine'
-
-@app.route('/whereami')
-def whereami():
-    return 'Ghana!'
-
 if __name__== '__main__':
     app.run(debug=True, host='0.0.0.0')
+    
+@app.route('/submit_survey')
+
+
 
 

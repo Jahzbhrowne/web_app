@@ -2,6 +2,7 @@ html{
   background-image:url("pic5.jpeg");
   background-size:cover;
   background-attachment:fixed;
+  background-position:center;
 }
 body{
  text-align:center;

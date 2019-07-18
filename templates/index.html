@@ -1,7 +1,7 @@
 <html>
   <head>
    <title>Hello World</title>
-   <link href= "static/styles.css" rel="stylesheet" type="text/css" >
+   <link href= "../static/styles.css" rel="stylesheet" type="text/css" >
   </head>
     <body>
 	<div class="header">
@@ -9,13 +9,18 @@
 	<h3>Authored by Jasmine</h3>
 	   <p>This is a web page built with CSS in our web application class brought to us by Globalcode</p>
 	</div>
-	 <form method = "POST" action="/create_user" class="form_deco">
+	 <form method = "POST" action="/submit_survey" class="form_deco">
 	 <div class = "form_cont">
 	   <div class = "form_cont2">	
 		<label>Name</>
 		<input class="inputs" name="username" type="text"/><br><br>
 		<label>Email</>
 		<input class="inputs" name="email" type="email"/><br><br>
+		<label>Position</>
+		<select>
+			<option>Student</option>
+			<option>Tutor</option>
+		</select><br><br>	
 		<label>Your favourite class in the first week?</><br>
 		<select>
 			<option>Intro to python</option>
@@ -24,10 +29,10 @@
 			<option>Intro to linux</option>
 		</select><br><br>
 		<label>How do you find the summer camp so far?</><br>
-		<input type="radio" name="">It is going very well<br>
-		<input type="radio" name="">It is quite challenging<br>
-		<input type="radio" name="">I am actually struggling<br>
-		<input type="radio" name="">I wish I had not come<br><br>
+		<input type="radio" name="1" value="very good" >It is going very well<br>
+		<input type="radio" name="1" value="good">It is quite challenging<br>
+		<input type="radio" name="1" value="bad">I am actually struggling<br>
+		<input type="radio" name="1" value="very bad">I wish I had not come<br><br>
 		<input type="submit"/>
 	  </div>
 	 </div>
